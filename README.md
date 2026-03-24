@@ -35,4 +35,4 @@ Para poner en marcha el proyecto en tu equipo local, sigue estos pasos:
     Abre http://localhost:4200/ para ver la aplicación funcionando.
 
 4. **Captura de Pantalla:**
-![FitVida App Screenshot](./screenshot.png)
+![FitVida App Screenshot](./screenshotFitVida.png)
