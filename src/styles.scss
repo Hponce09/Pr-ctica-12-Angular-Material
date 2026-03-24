@@ -1,1 +1,37 @@
-/* You can add global styles to this file, and also import other style files */
+@use '@angular/material' as mat;
+
+// --- CRITERIO 3: Definición del tema con colores oficiales ---
+$fitvida-theme: mat.define-theme((
+  color: (
+    theme-type: light,
+    primary: mat.$green-palette,   // Verde #2E7D32
+    tertiary: mat.$orange-palette, // Naranja #FF8F00
+  ),
+  typography: (
+    brand-family: 'Roboto',
+  ),
+  density: (
+    scale: 0,
+  ),
+));
+
+// --- Aplicación de estilos globales ---
+html {
+  // Criterio 7: Aplicamos el tema para que todo sea coherente
+  @include mat.all-component-themes($fitvida-theme);
+  margin: 0;
+  height: 100%;
+}
+
+body { 
+  margin: 0; 
+  font-family: Roboto, sans-serif; 
+}
+
+// --- CRITERIO 6: Importación y aplicación del mixin ---
+// IMPORTANTE: Asegúrate de que la ruta sea "app/hero-card/hero-card.scss" 
+// (sin el ./ delante suele dar menos errores en Angular)
+@import "app/hero-card/hero-card.scss";
+
+// Incluimos el mixin del componente personalizado pasando el tema
+@include hero-card-theme($fitvida-theme);

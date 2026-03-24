@@ -1,0 +1,31 @@
+@use '@angular/material' as mat;
+
+@mixin hero-card-theme($theme) {
+  .hero-card {
+    // Cambiamos 50 por 95 (un verde muy clarito de fondo)
+    background-color: mat.get-theme-color($theme, primary, 95);
+    
+    // CAMBIO CRÍTICO: Cambiamos 700 por 40 (el verde oscuro que sí existe)
+    border-left: 6px solid mat.get-theme-color($theme, primary, 40);
+    
+    padding: 24px;
+    margin: 20px 0;
+    border-radius: 8px;
+    display: block;
+
+    .hero-card__title {
+      // El 20 es un verde muy oscuro para el texto
+      color: mat.get-theme-color($theme, primary, 20);
+      font-weight: bold;
+      font-size: 1.5rem;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .hero-card__action {
+      // Usamos el naranja (tertiary) en el tono 60
+      background-color: mat.get-theme-color($theme, tertiary, 60) !important;
+      color: white !important;
+    }
+  }
+}
