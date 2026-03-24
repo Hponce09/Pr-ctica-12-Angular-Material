@@ -1,6 +1,6 @@
 # Práctica 12: Angular y Material - FitVida Wellness Studio
 
-**Alumno:** [Harold Andres Ponce Pachon]  
+**Alumno:** Harold Andres Ponce Pachon
 **Módulo:** Desarrollo Web en Entorno Cliente
 
 ---
